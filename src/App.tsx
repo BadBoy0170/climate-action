@@ -47,16 +47,16 @@ function App() {
         />
       )}
 
-      <nav className="fixed top-0 left-0 right-0 glass-effect shadow-lg z-40 border-b border-green-100">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-              <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full flex items-center justify-center shadow-lg animate-bounce-gentle">
+      <nav className="fixed top-0 right-0 left-0 z-40 border-b border-green-100 shadow-lg glass-effect">
+        <div className="container px-6 py-4 mx-auto">
+          <div className="flex justify-between items-center">
+            <div className="flex gap-3 items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+              <div className="flex justify-center items-center w-10 h-10 bg-gradient-to-br from-green-600 to-emerald-600 rounded-full shadow-lg animate-bounce-gentle">
                 <Leaf className="w-6 h-6 text-white" />
               </div>
               <div>
                 <span className="text-xl font-bold gradient-text">Climate Action Pledge</span>
-                <div className="flex items-center gap-1 text-xs text-gray-600">
+                <div className="flex gap-1 items-center text-xs text-gray-600">
                   <Sparkles className="w-3 h-3" />
                   <span>Make a difference today</span>
                 </div>
@@ -64,7 +64,7 @@ function App() {
             </div>
             <button
               onClick={scrollToPledgeForm}
-              className="bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 text-white px-8 py-3 rounded-full font-bold hover:shadow-xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+              className="flex gap-2 items-center px-8 py-3 font-bold text-white bg-gradient-to-r from-green-600 via-emerald-600 to-teal-600 rounded-full transition-all duration-300 transform hover:shadow-xl hover:scale-105"
             >
               <span>Take Pledge</span>
               <Sparkles className="w-4 h-4" />
@@ -83,56 +83,56 @@ function App() {
         <PledgeWall />
       </main>
 
-      <footer className="bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white py-16 relative overflow-hidden">
+      <footer className="overflow-hidden relative py-16 text-white bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-green-500 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
+          <div className="absolute right-0 bottom-0 w-96 h-96 bg-emerald-500 rounded-full blur-3xl"></div>
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="container relative z-10 px-6 mx-auto">
+          <div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-3">
             <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
+              <div className="flex gap-3 items-center mb-4">
+                <div className="flex justify-center items-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full shadow-lg">
                   <Leaf className="w-7 h-7 text-white" />
                 </div>
                 <span className="text-2xl font-bold">Climate Action Pledge</span>
               </div>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="leading-relaxed text-gray-300">
                 Empowering individuals to take meaningful climate action, one pledge at a time.
               </p>
-              <div className="mt-4 flex items-center gap-2 text-green-400">
+              <div className="flex gap-2 items-center mt-4 text-green-400">
                 <Sparkles className="w-4 h-4" />
                 <span className="text-sm font-semibold">Building a sustainable future together</span>
               </div>
             </div>
 
             <div>
-              <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+              <h3 className="flex gap-2 items-center mb-4 text-lg font-bold">
                 <span>Quick Links</span>
-                <div className="h-px flex-1 bg-gradient-to-r from-green-500 to-transparent"></div>
+                <div className="flex-1 h-px bg-gradient-to-r from-green-500 to-transparent"></div>
               </h3>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <button onClick={scrollToPledgeForm} className="hover:text-green-400 transition-colors flex items-center gap-2 group">
+                  <button onClick={scrollToPledgeForm} className="flex gap-2 items-center transition-colors hover:text-green-400 group">
                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full group-hover:scale-150 transition-transform"></span>
                     Take the Pledge
                   </button>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-green-400 transition-colors flex items-center gap-2 group">
+                  <a href="#" className="flex gap-2 items-center transition-colors hover:text-green-400 group">
                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full group-hover:scale-150 transition-transform"></span>
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-green-400 transition-colors flex items-center gap-2 group">
+                  <a href="#" className="flex gap-2 items-center transition-colors hover:text-green-400 group">
                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full group-hover:scale-150 transition-transform"></span>
                     Impact Stories
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-green-400 transition-colors flex items-center gap-2 group">
+                  <a href="#" className="flex gap-2 items-center transition-colors hover:text-green-400 group">
                     <span className="w-1.5 h-1.5 bg-green-500 rounded-full group-hover:scale-150 transition-transform"></span>
                     Resources
                   </a>
@@ -141,19 +141,19 @@ function App() {
             </div>
 
             <div>
-              <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+              <h3 className="flex gap-2 items-center mb-4 text-lg font-bold">
                 <span>Privacy & Data</span>
-                <div className="h-px flex-1 bg-gradient-to-r from-green-500 to-transparent"></div>
+                <div className="flex-1 h-px bg-gradient-to-r from-green-500 to-transparent"></div>
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">
+              <p className="text-sm leading-relaxed text-gray-300">
                 Your email and mobile number are used only for verification. They are never displayed publicly or shared with third parties. We are committed to protecting your privacy.
               </p>
             </div>
           </div>
 
-          <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
+          <div className="pt-8 text-center text-gray-400 border-t border-gray-700">
             <p className="text-lg">&copy; {new Date().getFullYear()} Climate Action Pledge. All rights reserved.</p>
-            <p className="mt-2 text-sm flex items-center justify-center gap-2">
+            <p className="flex gap-2 justify-center items-center mt-2 text-sm">
               <Sparkles className="w-4 h-4 text-green-500" />
               <span>Together, we build a sustainable future.</span>
               <Sparkles className="w-4 h-4 text-green-500" />
