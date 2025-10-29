@@ -33,7 +33,7 @@ export default function Hero({ onTakePledge }: HeroProps) {
         <Award className="w-14 h-14 text-teal-400/30" />
       </div>
 
-      <div className="container relative z-10 px-6 pt-32 mx-auto">
+      <div className="container relative z-10 px-6 pt-16 mx-auto">
         <div className="mx-auto max-w-4xl text-center">
           <div className={`inline-flex items-center gap-2 glass-effect px-6 py-3 rounded-full mb-8 shadow-lg transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}>
             <Leaf className="w-5 h-5 text-green-600 animate-bounce-gentle" />
@@ -55,7 +55,7 @@ export default function Hero({ onTakePledge }: HeroProps) {
           <div className={`transition-all duration-700 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
             <button
               onClick={onTakePledge}
-              className="inline-flex overflow-hidden relative gap-3 items-center px-10 py-5 text-lg font-semibold text-white bg-gradient-to-r from-green-600 via-emerald-600 to-green-600 rounded-full shadow-xl transition-all duration-300 transform group hover:shadow-2xl hover:scale-105"
+              className="inline-flex overflow-hidden relative gap-3 items-center px-10 py-5 text-lg font-semibold text-white bg-green-600 rounded-full shadow-xl transition-all duration-300 transform group hover:shadow-2xl hover:scale-105"
             >
               <span className="relative z-20">Take the Pledge Now</span>
               <Leaf className="w-6 h-6 group-hover:rotate-[360deg] transition-transform duration-500 relative z-20" />
